@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}</ProjectGuid>
+    <ProjectGuid>{BBF385B6-500E-4D87-8C42-DE6F44ED6089}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Humberto.Musicas.AcessoDados.Entity</RootNamespace>
-    <AssemblyName>Humberto.Musicas.AcessoDados.Entity</AssemblyName>
+    <RootNamespace>Humberto.Comum.Entity</RootNamespace>
+    <AssemblyName>Humberto.Comum.Entity</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,42 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\MusicasDbContext.cs" />
-    <Compile Include="Migrations\201803311750317_MigracaoInicial.cs" />
-    <Compile Include="Migrations\201803311750317_MigracaoInicial.Designer.cs">
-      <DependentUpon>201803311750317_MigracaoInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803311950317_MigracaoEmailAlbum.cs" />
-    <Compile Include="Migrations\201803311950317_MigracaoEmailAlbum.Designer.cs">
-      <DependentUpon>201803311950317_MigracaoEmailAlbum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="HumbertoEntityAbstractConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeConfiguration\AlbumTypeConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Humberto.Comum.Entity\Humberto.Comum.Entity.csproj">
-      <Project>{bbf385b6-500e-4d87-8c42-de6f44ed6089}</Project>
-      <Name>Humberto.Comum.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Humberto.Musicas.Dominio\Humberto.Musicas.Dominio.csproj">
-      <Project>{b9992849-a4f1-4267-83c3-304a2ebfc769}</Project>
-      <Name>Humberto.Musicas.Dominio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803311750317_MigracaoInicial.resx">
-      <DependentUpon>201803311750317_MigracaoInicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803311950317_MigracaoEmailAlbum.resx">
-      <DependentUpon>201803311950317_MigracaoEmailAlbum.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

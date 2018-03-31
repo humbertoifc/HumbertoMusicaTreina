@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acesso a Dados", "Acesso a 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humberto.Musicas.AcessoDados.Entity", "Humberto.Musicas.AcessoDados.Entity\Humberto.Musicas.AcessoDados.Entity.csproj", "{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humberto.Comum.Entity", "Humberto.Comum.Entity\Humberto.Comum.Entity.csproj", "{BBF385B6-500E-4D87-8C42-DE6F44ED6089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF385B6-500E-4D87-8C42-DE6F44ED6089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF385B6-500E-4D87-8C42-DE6F44ED6089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF385B6-500E-4D87-8C42-DE6F44ED6089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF385B6-500E-4D87-8C42-DE6F44ED6089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B9992849-A4F1-4267-83C3-304A2EBFC769} = {5A68B197-10DD-4703-83B8-108D74A3FD30}
 		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263} = {9CB56845-AD24-429F-BA27-F0D66613E922}
+		{BBF385B6-500E-4D87-8C42-DE6F44ED6089} = {9CB56845-AD24-429F-BA27-F0D66613E922}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {00719ADB-296E-4BDF-AF18-0456759325C7}
