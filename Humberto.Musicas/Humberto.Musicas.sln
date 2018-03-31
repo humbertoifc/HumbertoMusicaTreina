@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humberto.Musicas.Web", "Humberto.Musicas.Web\Humberto.Musicas.Web.csproj", "{BEC398EA-EF23-4A05-9D12-EFFD2E756F2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{5A68B197-10DD-4703-83B8-108D74A3FD30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humberto.Musicas.Dominio", "Humberto.Musicas.Dominio\Humberto.Musicas.Dominio.csproj", "{B9992849-A4F1-4267-83C3-304A2EBFC769}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acesso a Dados", "Acesso a Dados", "{9CB56845-AD24-429F-BA27-F0D66613E922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humberto.Musicas.AcessoDados.Entity", "Humberto.Musicas.AcessoDados.Entity\Humberto.Musicas.AcessoDados.Entity.csproj", "{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEC398EA-EF23-4A05-9D12-EFFD2E756F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC398EA-EF23-4A05-9D12-EFFD2E756F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC398EA-EF23-4A05-9D12-EFFD2E756F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC398EA-EF23-4A05-9D12-EFFD2E756F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9992849-A4F1-4267-83C3-304A2EBFC769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9992849-A4F1-4267-83C3-304A2EBFC769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9992849-A4F1-4267-83C3-304A2EBFC769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9992849-A4F1-4267-83C3-304A2EBFC769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B9992849-A4F1-4267-83C3-304A2EBFC769} = {5A68B197-10DD-4703-83B8-108D74A3FD30}
+		{8EDFF21A-009E-48F8-8AEB-F6CB789BD263} = {9CB56845-AD24-429F-BA27-F0D66613E922}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00719ADB-296E-4BDF-AF18-0456759325C7}
+	EndGlobalSection
+EndGlobal
