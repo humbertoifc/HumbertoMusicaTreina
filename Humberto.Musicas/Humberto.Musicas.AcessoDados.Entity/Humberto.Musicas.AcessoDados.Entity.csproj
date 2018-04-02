@@ -32,9 +32,11 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -48,13 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\MusicasDbContext.cs" />
-    <Compile Include="Migrations\201803311750317_MigracaoInicial.cs" />
-    <Compile Include="Migrations\201803311750317_MigracaoInicial.Designer.cs">
-      <DependentUpon>201803311750317_MigracaoInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803311950317_MigracaoEmailAlbum.cs" />
-    <Compile Include="Migrations\201803311950317_MigracaoEmailAlbum.Designer.cs">
-      <DependentUpon>201803311950317_MigracaoEmailAlbum.cs</DependentUpon>
+    <Compile Include="Migrations\201804021306011_InicioDeTudo.cs" />
+    <Compile Include="Migrations\201804021306011_InicioDeTudo.Designer.cs">
+      <DependentUpon>201804021306011_InicioDeTudo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,11 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803311750317_MigracaoInicial.resx">
-      <DependentUpon>201803311750317_MigracaoInicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803311950317_MigracaoEmailAlbum.resx">
-      <DependentUpon>201803311950317_MigracaoEmailAlbum.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804021306011_InicioDeTudo.resx">
+      <DependentUpon>201804021306011_InicioDeTudo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
