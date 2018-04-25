@@ -10,17 +10,20 @@ using Humberto.Musicas.AcessoDados.Entity.Context;
 using Humberto.Musicas.Dominio;
 using AutoMapper;
 using Humberto.Musicas.Web.ViewModels.Album;
+using Humberto.Repositorios.Comum;
+using Humberto.Musicas.Repositorios.Entity;
 
 namespace Humberto.Musicas.Web.Controllers
 {
     public class AlbunsController : Controller
     {
-        private MusicasDbContext db = new MusicasDbContext();
+        private IRepositorioGenerico<Album, int> repositorioAlbums 
+            = new AlbumsRepositorio(new MusicasDbContext());
 
         // GET: Albuns
         public ActionResult Index()
         {
-            return View(Mapper.Map<List<Album>, List<AlbumExibicaoViewModel>>(db.Albuns.ToList()));
+            return View(Mapper.Map<List<Album>, List<AlbumExibicaoViewModel>>(repositorioAlbums.Selecionar()));
         }
 
         // GET: Albuns/Details/5
@@ -30,7 +33,7 @@ namespace Humberto.Musicas.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = db.Albuns.Find(id);
+            Album album = repositorioAlbums.SelecionarPorId(id.Value);
             if (album == null)
             {
                 return HttpNotFound();
@@ -54,8 +57,7 @@ namespace Humberto.Musicas.Web.Controllers
             if (ModelState.IsValid)
             {
                 Album album = Mapper.Map<AlbumViewModel, Album>(viewModel);
-                db.Albuns.Add(album);
-                db.SaveChanges();
+                repositorioAlbums.Inserir(album);
                 return RedirectToAction("Index");
             }
 
@@ -69,7 +71,7 @@ namespace Humberto.Musicas.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = db.Albuns.Find(id);
+            Album album = repositorioAlbums.SelecionarPorId(id.Value);
             if (album == null)
             {
                 return HttpNotFound();
@@ -87,8 +89,7 @@ namespace Humberto.Musicas.Web.Controllers
             if (ModelState.IsValid)
             {
                 Album album = Mapper.Map<AlbumViewModel, Album>(viewModel);
-                db.Entry(album).State = EntityState.Modified;
-                db.SaveChanges();
+                repositorioAlbums.Alterar(album);
                 return RedirectToAction("Index");
             }
             return View(viewModel);
@@ -101,7 +102,7 @@ namespace Humberto.Musicas.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = db.Albuns.Find(id);
+            Album album = repositorioAlbums.SelecionarPorId(id.Value);
             if (album == null)
             {
                 return HttpNotFound();
@@ -114,19 +115,8 @@ namespace Humberto.Musicas.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Album album = db.Albuns.Find(id);
-            db.Albuns.Remove(album);
-            db.SaveChanges();
+            repositorioAlbums.ExcluirPorID(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

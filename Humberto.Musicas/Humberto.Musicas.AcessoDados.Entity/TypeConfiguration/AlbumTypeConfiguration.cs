@@ -42,7 +42,9 @@ namespace Humberto.Musicas.AcessoDados.Entity.TypeConfiguration
 
         protected override void ConfigurarChavesEstrangeiras()
         {
-            
+            //HasMany(p => p.Musicas)
+            //    .WithRequired(p => p.Album)
+            //    .HasForeignKey(fk => fk.IdAlbum);
         }
 
         protected override void ConfigurarNomeTabela()

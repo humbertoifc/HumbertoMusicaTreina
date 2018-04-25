@@ -13,5 +13,7 @@ namespace Humberto.Musicas.Dominio
         public int Ano { get; set; }
         public string Observacoes { get; set; }
         public string Email { get; set; }
+
+        public virtual List<Musica> Musicas { get; set; }
     }
 }

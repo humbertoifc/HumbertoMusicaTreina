@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Humberto.Musicas.Web.Annotations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace Humberto.Musicas.Web.ViewModels.Album
         [MaxLength(50, ErrorMessage ="O email deve conter no maximo 50 caracteres")]
         [Display(Name = "Email de contato")]
         [DataType(DataType.EmailAddress)]
+        [EmailHumbertoAttribute(ErrorMessage = "O E-mail tem que ser da treinaweb")]       
         public string Email { get; set; }
     }
 }
